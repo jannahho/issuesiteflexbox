@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Special+Elite&display=swap');
 
 body {
-  margin: 0;
+  margin: 5px;
   padding: 0;
   background-color: #D6D5B6;
   font-family: 'Abyssinica SIL', serif;
@@ -10,104 +10,113 @@ body {
 
 .maincontainer {
   display: flex;
-  flex-direction: column;
-  width: 100vmax;
-  height: 100vmax;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
-}
-
-/* .flextest {
-  box-sizing: border-box;
-  height: 700px;
-  display: flex;
-  padding: 20px;
-}
-
-.one {
   flex-direction: column;
-  align-items: flex-end;
-  writing-mode: vertical-rl;
-
-}
-
-.two {
-  flex-direction: column;
-  align-self: flex-start;
-  order: 4;
-  writing-mode: vertical-rl;
-
-}
-
-.three {
-  flex-direction: row;
   justify-content: center;
-  order: 2;
+  align-items: center;
 }
 
-.four {
-  order: 3;
-  flex-direction: row;
-  align-self:flex-end;
-} */
-
-
-.bordertext {
+.bordertexttop {
   display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
   color: #e9e1f2;
   font-size: 50px;
   font-family: 'Special Elite', display;
   letter-spacing: 30px;
   background: none;
-  width: 100vmax;
-  height: 100vmax;
-  box-sizing: border-box;
-  padding: 10px;
+  width: 100%;
+  height: 10%
   order: 0;
-  /* text-overflow: square; */
 }
 
-.bord1 {
-  flex-direction: column;
-  align-items: flex-end;
-  writing-mode: vertical-rl;
-  order:1;
-  /* margin-left: 4px;
-  margin-top: 10px;
-  padding: 4px; */
-}
-.bord2 {
+.bordertextbottom {
+  display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  order: 10;
+  align-items: flex-end;
+  color: #e9e1f2;
+  font-size: 50px;
+  font-family: 'Special Elite', display;
+  letter-spacing: 30px;
+  background: none;
+  width: 100%;
+  height: 10%;
+  order: 100;
+}
+
+/* .bord1 {
+  flex-direction: row;
+  justify-content: flex-start;
+  writing-mode: vertical-rl;
+} */
+.middle{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.bord2 {
+  box-sizing: border-box;
+  width: 10%;
+  height: 100%;
+  justify-content: flex-start;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
+  order: 2;
+  font-size: 50px;
+  font-family: 'Special Elite', display;
+  letter-spacing: 30px;
+  background: none;
+  color: #e9e1f2;
 
 }
 
 .bord3 {
-  /* flex-direction: row; */
+  align-items: flex-end;
+  writing-mode: vertical-rl;
+  width: 10%;
+  height: 100%;
   justify-content: flex-end;
-  order: 2;
-  flex-flow: row-reverse;
+  order: 5;
+  font-size: 50px;
+  font-family: 'Special Elite', display;
+  letter-spacing: 30px;
+  background: none;
+  color: #e9e1f2;
 }
 
-.bord4 {
-  order: 3;
-  flex-direction: row;
-  align-self: flex-end;
-  /* margin-left: 40px;
-  margin-bottom: 40px;
-  margin-right: 4px; */
+/* .bord4 {
+  flex-direction: column;
+  align-items: flex-start;
+}   */
 
-}
+
 .centertext {
   justify-content: center;
   align-self: center;
-  order: 2;
   font-size: 50px;
+  color: #1852A4;
+  position: absolute;
 }
 
 /* learned from https://code-boxx.com/css-circles-text/ */
+
+.maincontent {
+  display: flex;
+  height: 80%;
+  order: 3;
+  padding: 7%;
+  padding-left: 20%;
+  padding-right: 20%;
+  flex-shrink: 1;
+}
+
 .centercircle {
   box-sizing: border-box;
   background-color: #c1b8cc;
@@ -117,91 +126,71 @@ body {
   height: 60vmin;
   width: 60vmin;
   border-radius: 50%;
-  order: 4;
-  position: absolute;
-  margin-top: 30%;
 }
-/* .centercircle::after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
-} */
+
 
 .alltxtpagebuttons {
   display: flex;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
   flex-direction: row;
+  box-sizing: border-box;
+  align-items: flex-end;
+  justify-content: center;
+  order: 4;
 }
 
 .trianglebutton {
+  background-color: transparent;
   justify-content: flex-end;
   cursor: pointer;
-  position: absolute;
-  top: 330px;
-  right: 110px;
-  width: 50px; */
-  background: url('https://raw.githubusercontent.com/jannahho/issuesite/main/triangle.png') no-repeat;
-  padding: 200px;
-  background-size: auto;
-  margin: none;
   border: none;
   transform: rotate(-20deg);
+
 }
 .squarebutton {
-  justify-content: flex-start;
+  background-color: transparent;
   border: none;
-  display: block;
+  justify-content: flex-start;
   cursor: pointer;
-  position: absolute;
-  top: 480px;
-  right: 460px;
-  width: 280px; */
-  background: url('https://raw.githubusercontent.com/jannahho/issuesite/main/square.png') no-repeat;
-  padding: 200px;
-  margin: auto;
   transform: rotate(5deg);
 }
 
 .starbutton {
-  align-self: flex-end;
+  background-color: transparent;
   border: none;
+  align-self: flex-end;
   cursor: pointer;
-  position: absolute;
-  top: 430px;
-  right: 290px;
-  width: 280px; */
-  background: url('https://raw.githubusercontent.com/jannahho/issuesite/main/star.png') no-repeat;
-  padding: 200px;
-  margin: 2px;
   transform: rotate(-5deg);
 }
 
 .circlebutton {
+  background-color: transparent;
+  border: none;
   justify-content: flex-end;
   align-self: flex-end;
-  border: none;
   cursor: pointer;
-  position: absolute;
-  top: 410px;
-  right: 660px;
-  width: 280px; */
-  background: url('https://raw.githubusercontent.com/jannahho/issuesite/main/circle.png') no-repeat;
-  padding: 200px;
-  margin: 2px;
   transform: rotate(20deg);
 }
 
+.allthetextpages {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .popup {
+  display: flex;
+  box-sizing: border-box;
   position: absolute;
-  top: 300px;
-  margin-left: 565px;
-  padding-left: 20px;
-  padding-right: 20px;
+  justify-content: center;
+  align-content: center;
+  width: 500px;
   background-color: #adcfff;
+  padding: 10px;
 }
 
 .submissiontext {
   color: #070c94;
+  text-align: center;
 }
