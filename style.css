@@ -47,11 +47,7 @@ body {
   order: 100;
 }
 
-/* .bord1 {
-  flex-direction: row;
-  justify-content: flex-start;
-  writing-mode: vertical-rl;
-} */
+
 .middle{
   display: flex;
   flex-direction: row;
@@ -90,11 +86,6 @@ body {
   background: none;
   color: #e9e1f2;
 }
-
-/* .bord4 {
-  flex-direction: column;
-  align-items: flex-start;
-}   */
 
 
 .centertext {
